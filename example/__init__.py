@@ -26,7 +26,7 @@ async def GetDataFromTelegram(key: str, data: dict = Body(...,embed=False)):
         user = callback_query['from']['id']
         data_type = 2
     else:
-        data_type = None
+        return
 
     step = (await db.GetStep(user)).split('/')
     mess_id = await db.GetMEssageID(user)
