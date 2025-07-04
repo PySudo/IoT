@@ -45,7 +45,6 @@ class ManagePins:
                         self.AddPin(GPIO)
                         self.ChangeValue(value)
                     elif self.pins[GPIO] != value:
-                        print('pin '+str(GPIO)+' changed')
                         self.ChangeValue(GPIO, value)
 
                 for i in [i for i in self.pins if not i in check_list]:
