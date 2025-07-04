@@ -35,7 +35,6 @@ class ManagePins:
         try:
             check_list = list()
             result = get(self.API+'GetPins?key='+self.KEY).json()
-            print(result)
             if result['ok']:
                 for GPIO, value in result['result'].items():
                     GPIO = int(GPIO)
